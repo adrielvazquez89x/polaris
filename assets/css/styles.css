@@ -1,0 +1,93 @@
+* {
+    font-family: 'Hind Siliguri', sans-serif;
+}
+
+
+/* NAVEGACION */
+nav {
+    display: flex;
+    justify-content: center;
+
+}
+
+ul li {
+    font-weight: 700;
+    display: inline-block;
+    padding-right: 2rem;
+
+}
+
+ /* lOGO */
+.logoMain {
+    display: flex;
+    justify-content: center;
+}
+
+.logoMain img {
+    width: 25%;
+}
+
+.containerLogo img {
+    max-width: 25%;
+
+}
+
+/* TIENDA*/
+.store {
+    padding: 40px;
+    margin: 40px;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.store img {
+    max-width: 35%;
+}
+
+.cartImg {
+    width: 50px;
+    margin: 20px;
+}
+
+
+/* Carrito*/
+.card {
+    width: 25rem;
+    margin-bottom: 10px;
+}
+.cart {
+    background-color: rgba(255, 236, 220, 0.849);
+    border-radius: 2px;
+    margin: 25px;
+    padding: 25px;
+}
+.cartElement {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total {
+    font-weight: bold;
+    display: flex;
+    justify-content: end;
+}
+.totalCart {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: rgba(19, 16, 16, 0.877);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerContent li {
+    color: white;
+
+}
