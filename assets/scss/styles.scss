@@ -1,0 +1,110 @@
+* {
+    font-family: 'Hind Siliguri', sans-serif;
+}
+main {
+    background-image: url(../images/bg.jpg);
+        background-attachment: fixed;
+}
+.box {
+    background-color: rgba(0, 0, 0, 0.8);
+
+}
+
+/* NAVEGACION */
+nav {
+    display: flex;
+    justify-content: center;
+
+    ul li {
+        font-weight: 700;
+        display: inline-block;
+        padding-right: 2rem;
+
+    }
+
+    img {
+        display: none;
+    }
+
+}
+
+
+
+/* lOGO */
+.logoMain {
+    display: flex;
+    justify-content: center;
+
+    img {
+        width: 25%;
+    }
+}
+
+.containerLogo img {
+    max-width: 25%;
+
+}
+
+/* TIENDA*/
+.store {
+    padding: 40px;
+    margin: 40px;
+    display: flex;
+    justify-content: space-evenly;
+
+    img {
+        max-width: 35%;
+    }
+
+}
+
+.cartImg {
+    width: 50px;
+    margin: 20px;
+}
+
+
+/* Carrito*/
+.card {
+    width: 25rem;
+    margin-bottom: 10px;
+}
+
+.cart {
+    background-color: rgba(255, 236, 220, 0.849);
+    border-radius: 2px;
+    margin: 25px;
+    padding: 25px;
+}
+
+.cartElement {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total {
+    font-weight: bold;
+    display: flex;
+    justify-content: end;
+}
+
+.totalCart {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: rgba(19, 16, 16, 0.877);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerContent li {
+    color: white;
+
+}
