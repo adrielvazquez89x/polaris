@@ -156,7 +156,7 @@ function removeElement(id) {
         cart.splice(pos, 1);
     }
 
-    getProductsCart(cart);
+    productsCart(cart);
     refreshCart();
     cartRenderize()
 }
