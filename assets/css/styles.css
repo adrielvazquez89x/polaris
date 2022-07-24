@@ -127,7 +127,7 @@ main {
   border: none !important; }
 
 .swal2-styled.swal2-confirm {
-  background-color: #1AC071; }
+  background-color: #1AC071 !important; }
 
 .favorites {
   display: flex;
