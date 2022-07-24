@@ -123,6 +123,12 @@ main {
   .store img {
     max-width: 35%; }
 
+.swal2-icon {
+  border: none !important; }
+
+.swal2-styled.swal2-confirm {
+  background-color: #1AC071; }
+
 .favorites {
   display: flex;
   flex-direction: column;

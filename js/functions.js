@@ -19,3 +19,4 @@ function getProductsCart() {
 const discount = (total) => {
     return (total - (total * 0.10))
 }
+

@@ -12,6 +12,7 @@ const addToCart = (i) => {
         productsCart(cart)
         refreshCart()
         cartRenderize();
+
     }
     else {
         cart[elementCart].amount += 1
@@ -69,3 +70,4 @@ function removeElement(id) {
     refreshCart();
     cartRenderize()
 }
+

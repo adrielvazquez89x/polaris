@@ -16,7 +16,7 @@ const cartRenderize = () => {
             <div class="elementDetails"> Cantidad: ${element.amount}</div>
             <div class="elementDetails"> Precio: ${element.precio}</div>
             <div class="elementDetails"> Subtotal: ${subtotal}</div>
-            <button class="btn btn-warning" id="removeElement" onclick="removeElement(${element.id})">Eliminar producto</button>`;
+            <button class="btn btn-warning removeCart" id="removeElement" onclick="removeElement(${element.id})">Eliminar producto</button>`;
             console.log(subtotal)
             modalCart.appendChild(cartCointainer);
 

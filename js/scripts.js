@@ -8,9 +8,6 @@ const products = [
     { id: 7, clase: "Guitarra", marca: "Jackson", modelo: "Randy Rhoads RR3", precio: 4700, imagen: "./assets/images/07.png" },
 ];
 
-
-
-
 // Para crear la tienda
 const store = document.getElementById("store");
 productsLS(products);
@@ -23,7 +20,7 @@ getProductsLS().forEach((element, i) => {
     <div class="card-body">
       <h5 class="card-title">${element.marca} ${element.modelo}</h5>
       <p class="card-text">${element.clase} ${element.marca} ${element.modelo} precio:$${element.precio}</p>
-      <a class="btn btn-dark" onClick="addToCart(${i})">Agregar al carrito</a>
+      <a class="btn btn-dark addCart" onClick="addToCart(${i})">Agregar al carrito</a>
     </div>`
     card.innerHTML = code;
     store.appendChild(card);
@@ -50,7 +47,9 @@ favorites.appendChild(favCard)
 const checkOut = () => {
     const total = document.getElementsByClassName("total")[0].innerHTML;
     modalCart.innerHTML = "";
-    refreshCart() > 5 ? alert("Como llevaste mas de cinco productos, te haremos un descuento del 10%") : alert("No hay descuentos disponibles.")
+    refreshCart() > 5 ? Swal.fire({ title: "Increible!", text: "Como llevaste mas de cinco productos, te haremos un descuento del 10%", confirmButtonText: "Excelente" }) : Swal.fire({text: "No hay descuentos disponibles."})
+
+
     const purchasedCompleted = `        <div class="purchaseCompleted">
     <p class="purchaseP">Ya casi finalizamos, el ${discount(cartRenderize())}</p>
         <div class="clientData">
@@ -60,5 +59,6 @@ const checkOut = () => {
     </div>`
     modalCart.innerHTML = purchasedCompleted;
 };
+
 
 refreshCart()
