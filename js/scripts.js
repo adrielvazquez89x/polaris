@@ -1,25 +1,21 @@
-
 // Para crear la tienda
 
 let products = [];
 
 fetch("./js/products.json")
-.then((response) => response.json())
-.then((data) => {
-    storeProducts(data)
-
-})
+    .then((response) => response.json())
+    .then((data) => {
+        storeProducts(data), favProducts(data)
+    })
 
 // Para crear la tienda
-
-
 const storeProducts = (data) => {
     products = data;
     const store = document.getElementById("store");
     products.forEach((element, i) => {
         let card = document.createElement("div");
         card.classList.add("card", "col-sm-2", "col-md-3", "col-lg-4", "align-items-center", "margen", "border-0");
-    
+
         let code = `<img src="${element.imagen}" class="card-img-top" alt="${element.marca} ${element.modelo}">
         <div class="card-body">
           <h5 class="card-title">${element.marca} ${element.modelo}</h5>
@@ -29,10 +25,28 @@ const storeProducts = (data) => {
         card.innerHTML = code;
         store.appendChild(card);
     });
-    
+
 }
 
 // Favorito
+const favProducts = (data) => {
+    products = data;
+    console.log(products)
+    let [, , , , , , { id, clase, marca, modelo, precio, imagen }] = products
+    const fav = document.getElementById("favorites");
+    let favCard = document.createElement("div");
+    favCard.classList.add("card", "col-sm-2", "col-md-3", "col-lg-4", "align-items-center", "margen", "border-0");
+
+    favCard.innerHTML = `<img src="${imagen}" class="card-img-top" alt="${marca} ${modelo}">
+    <div class="card-body">
+    <h5 class="card-title">${marca} ${modelo}</h5>
+    <p class="card-text">${clase} ${marca} ${modelo} precio: $${precio}</p>
+    </div>`
+    favorites.appendChild(favCard)
+
+}
+
+
 
 
 // Compra completada
