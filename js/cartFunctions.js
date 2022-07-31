@@ -1,6 +1,10 @@
 // Agregar al carrito 
 const cart = getProductsCart();
+let addTable = document.getElementById("coso");
+
 const addToCart = (i) => {
+    addTable.classList.remove("none");
+    console.log(addTable)
     const elementCart = cart.findIndex((element) => {
         return element.id == products[i].id
     });
@@ -13,6 +17,7 @@ const addToCart = (i) => {
         refreshCart()
         cartRenderize();
 
+
     }
     else {
         cart[elementCart].amount += 1
@@ -20,13 +25,14 @@ const addToCart = (i) => {
         refreshCart()
         cartRenderize();
     }
+
 }
 
 // Actualizar el boton del carrito 
 function refreshCart() {
     let contenido = `
-    <button type="button" class="btn btn-warning position-relative">
-    Carrito
+    <i class="fa-solid fa-cart-shopping iconito"></i>
+    
     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
          0
          <span class="visually-hidden">unread messages</span>
@@ -42,8 +48,8 @@ function refreshCart() {
         }
 
         contenido = `
-        <button href"#finalizar" onClick="cartRenderize()" type="button" class="btn btn-warning position-relative">
-        Carrito
+        <i class="fa-solid fa-cart-shopping iconito"></i>
+        
         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
             ${total}
             <span class="visually-hidden"></span>
@@ -71,3 +77,18 @@ function removeElement(id) {
     cartRenderize()
 }
 
+// Vaciar carrito
+
+let empty = document.getElementById("emptyCart");
+
+function deletear() {
+    empty.addEventListener("click", ()=> {
+        localStorage.removeItem("cart");
+        modalCart.innerHTML = "";
+        cart.length = 0
+        refreshCart()
+            })
+
+}
+deletear()
+refreshCart()

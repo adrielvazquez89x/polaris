@@ -23,12 +23,7 @@
             <img src="./assets/images/logo.png" alt="">
         </div>
         <nav class="navbar navbar-expand-lg navbar-light main-color">
-            <div class="container-fluid">
-                <div class="containerLogo mx-auto">
-                    <a class="logo" href="./index.html"><img src="./assets/images/logo.png" alt="Polaris Music">
-                        <h2></h2>
-                    </a>
-                </div>
+            <div class="container-fluid ">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -36,16 +31,34 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-between white" id="navbarNavAltMarkup">
                     <div class="navbar-nav align-items-center text-uppercase mx-auto">
-                        <a class="nav-link px-4 active" aria-current="page" href="./index.html">Inicio</a>
+                        <a class="nav-link px-4" href="./index.html">Inicio</a>
                         <a class="nav-link px-4" href="#tienda">Tienda</a>
                         <a class="nav-link px-4" href="#">Ofertas</a>
                         <a class="nav-link px-4" href="#">Marcas</a>
                     </div>
+                    <div class="text-center" id="contIcon">
+                        <a href="#" id="cartBtn"></a>
+                    </div>
                 </div>
-                <div>
-                    <a href="#cart" id="cartBtn"></a>
-                </div>
+                <div class="contCart">
+                    <table id="coso">
+                        <tr>
+                            <th></th>
+                            <th class="px-5">Imagen</th>
+                            <th class="pl-5">Producto</th>
+                            <th class="px-2">Cantidad</th>
+                            <th class="px-2">Precio</th>
+                            <th>Subtotal</th>
+                        </tr>
+                    </table>
+                    <div  id="cart">
 
+
+                    </div>
+                    <div class="containerEmpty" id="prueba">
+                        <a href="#" class="btn btn-danger my-2" id="emptyCart">Vaciar Carrito</a>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
@@ -85,9 +98,6 @@
                 <div class="store row text-center" id="store">
                     <h2>Instrumentos en venta</h2>
                     <!-- <p>Aca va la tienda</p> -->
-                </div>
-                <div id="cart">
-                    <!-- <p>aca va el carrito provisorio</p> -->
                 </div>
             </section>
 

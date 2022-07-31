@@ -1,13 +1,33 @@
 /* Carrito*/
+.iconito {
+    font-size: 35px;
+    color: orange;
+}
+
 .card {
     width: 25rem;
     margin-bottom: 10px;
 }
 
-.cart {
-    background-color: rgba(255, 236, 220, 0.849);
+.bar {
+    position: relative;
+}
+
+nav:hover .contCart {
+    display: block;
+
+}
+
+.contCart {
+    display: block;
+    overflow-y: scroll;
+    position: absolute;
+    max-height: 300px;
+    top: 100%;
+    right: 0;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.973);
     border-radius: 2px;
-    margin: 25px;
     padding: 25px;
 }
 
@@ -15,7 +35,30 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    td {
+        padding: 10px;
+    }
 }
+.containerEmpty {
+    display: flex;
+    justify-content: center;
+}
+
+/* .empty {
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    border: solid 1px;
+    border-radius: 5px;
+    padding: 2px 20px;
+
+
+    &:hover {
+        background-color: red;
+        color: white;
+    }
+} */
 
 .total {
     font-weight: bold;
@@ -28,8 +71,8 @@
     flex-direction: column;
     align-items: end;
 }
+
 .cartImg {
     width: 50px;
     margin: 20px;
 }
-

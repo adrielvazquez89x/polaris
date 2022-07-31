@@ -7,7 +7,8 @@ nav {
     display: inline-block;
     padding-right: 2rem; }
   nav img {
-    display: none; }
+    width: 10px;
+    margin-right: 25px; }
 
 /* lOGO */
 .logoMain {
@@ -20,20 +21,42 @@ nav {
   max-width: 25%; }
 
 /* Carrito*/
+.iconito {
+  font-size: 35px;
+  color: orange; }
+
 .card {
   width: 25rem;
   margin-bottom: 10px; }
 
-.cart {
-  background-color: rgba(255, 236, 220, 0.849);
+.bar {
+  position: relative; }
+
+nav:hover .contCart {
+  display: block; }
+
+.contCart {
+  display: block;
+  overflow-y: scroll;
+  position: absolute;
+  max-height: 300px;
+  top: 100%;
+  right: 0;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.973);
   border-radius: 2px;
-  margin: 25px;
   padding: 25px; }
 
 .cartElement {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  .cartElement td {
+    padding: 10px; }
+
+.containerEmpty {
+  display: flex;
+  justify-content: center; }
 
 .total {
   font-weight: bold;
@@ -137,3 +160,7 @@ main {
   .favorites h2 {
     color: white;
     padding-bottom: 1.5rem; }
+
+    .none {
+      display: none;
+    }

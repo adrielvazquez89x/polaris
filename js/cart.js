@@ -5,18 +5,20 @@ const cartRenderize = () => {
     modalCart.className = "cart";
     modalCart.innerHTML = "";
     if (cart.length > 0) {
-        console.log(cart)
         for (element of cart) {
             let subtotal = element.precio * element.amount
-                       
-            const cartCointainer = document.createElement("div");
+
+            const cartCointainer = document.createElement("table");
             cartCointainer.className = "cartElement";
-            cartCointainer.innerHTML = `<img class="cartImg" src="${element.imagen}" alt="">
-            <div class="elementDetails">${element.marca} ${element.modelo}</div>
-            <div class="elementDetails"> Cantidad: ${element.amount}</div>
-            <div class="elementDetails"> Precio: ${element.precio}</div>
-            <div class="elementDetails"> Subtotal: ${subtotal}</div>
-            <button class="btn btn-warning removeCart" id="removeElement" onclick="removeElement(${element.id})">Eliminar producto</button>`;
+            cartCointainer.innerHTML = `
+            <img class="cartImg" src="${element.imagen}" alt="">
+            <td>${element.marca} ${element.modelo}</td>
+            <td>${element.amount}</td>
+            <td>$${element.precio}</td>
+            <td>$${subtotal}</td>
+            <button class="btn btn-danger ml-5" id="removeElement" onclick="removeElement(${element.id})"> X </button>
+            </tr>`;
+            
             console.log(subtotal)
             modalCart.appendChild(cartCointainer);
 
@@ -24,7 +26,7 @@ const cartRenderize = () => {
 
 
         };
-       
+
         const totalContainer = document.createElement("div");
         totalContainer.className = "totalCart"
         totalContainer.innerHTML = `<div class="total">Total $${total}</div>
@@ -36,6 +38,7 @@ const cartRenderize = () => {
     }
     else {
         modalCart.classList.remove("cart");
+        
 
     }
 }
