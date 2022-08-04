@@ -16,16 +16,37 @@ function alertAddCart() {
     Toast.fire({
         iconHtml: '<i class="fa-solid fa-music"></i>',
         iconColor: 'white',
-        color:  'white',
+        color: 'white',
         background: '#1AC071',
         title: 'Agregado correctamente'
     })
-
 }
 
+function popup() {
+    setTimeout(() => {
+        Swal.fire({
+            title: 'Estamos locos!',
+            text: 'Si llevás mas de 5 artículos, tenés un 10% de descuento',
+            position: 'center-start',
+            confirmButtonText: "Excelente",
+            showClass: {
+                popup: 'animate__animated animate__fadeInDown'
+            },
+            hideClass: {
+                popup: 'animate__animated animate__fadeOutUp'
+            }
+        })
+    }, 10000)
+}
+
+popup()
+
+
 let alertAdd = document.getElementsByClassName("addCart");
-alertAdd[0].addEventListener("click", alertAddCart);
+console.log(alertAdd)
+alertAdd[1].addEventListener("click", alertAddCart);
 for (alert of alertAdd) {
     alert.addEventListener("click", alertAddCart);
 };
+
 

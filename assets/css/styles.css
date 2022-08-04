@@ -58,20 +58,6 @@ nav:hover .contCart {
   display: flex;
   justify-content: center; }
 
-/* .empty {
-    text-decoration: none;
-    background-color: white;
-    color: black;
-    border: solid 1px;
-    border-radius: 5px;
-    padding: 2px 20px;
-
-
-    &:hover {
-        background-color: red;
-        color: white;
-    }
-} */
 .total {
   font-weight: bold;
   display: flex;
@@ -85,6 +71,9 @@ nav:hover .contCart {
 .cartImg {
   width: 50px;
   margin: 20px; }
+
+.none {
+  display: none; }
 
 /* Foooter */
 footer {
@@ -103,6 +92,7 @@ footer {
     transition: 0.4s;
     text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, -23px -20px 20px rgba(206, 89, 55, 0), -19px -20px 20px rgba(206, 0, 0, 0.15); }
   .footer-container h3 {
+    color: black;
     padding: 10px; }
   .footer-container li {
     font-size: 12px;
@@ -141,6 +131,9 @@ footer {
 * {
   font-family: 'Hind Siliguri', sans-serif; }
 
+a {
+  text-decoration: none; }
+
 main {
   background-image: url(../images/bg.jpg);
   background-attachment: fixed; }
@@ -160,6 +153,9 @@ main {
   .store img {
     max-width: 35%; }
 
+.formu {
+  padding: 100px; }
+
 .swal2-icon {
   border: none !important; }
 
@@ -174,3 +170,16 @@ main {
   .favorites h2 {
     color: white;
     padding-bottom: 1.5rem; }
+
+/* 
+.featuredd {
+    text-align: center;
+    background-color: blueviolet;
+    padding: 20px;
+    width: 200px;
+    height: 400px;
+    p {
+        color: #1AC071;
+        font-size: 32px;
+    }
+} */

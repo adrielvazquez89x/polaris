@@ -31,7 +31,7 @@ const addToCart = (i) => {
 // Actualizar el boton del carrito 
 function refreshCart() {
     let contenido = `
-    <i class="fa-solid fa-cart-shopping iconito"></i>
+    <i class="fa-solid fa-cart-shopping position-relative iconito"></i>
     
     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
          0

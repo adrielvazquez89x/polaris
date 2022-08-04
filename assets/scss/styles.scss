@@ -6,7 +6,9 @@
 * {
     font-family: 'Hind Siliguri', sans-serif;
 }
-
+a {
+    text-decoration: none;
+}
 main {
     background-image: url(../images/bg.jpg);
     background-attachment: fixed;
@@ -36,6 +38,9 @@ main {
     }
 
 }
+.formu {
+    padding: 100px;
+}
 
 .swal2-icon {
     border: none !important;
@@ -56,3 +61,15 @@ main {
         padding-bottom: 1.5rem;
     }
 }
+/* 
+.featuredd {
+    text-align: center;
+    background-color: blueviolet;
+    padding: 20px;
+    width: 200px;
+    height: 400px;
+    p {
+        color: #1AC071;
+        font-size: 32px;
+    }
+} */

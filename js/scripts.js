@@ -19,7 +19,7 @@ const storeProducts = (data) => {
         let code = `<img src="${element.imagen}" class="card-img-top" alt="${element.marca} ${element.modelo}">
         <div class="card-body">
           <h5 class="card-title">${element.marca} ${element.modelo}</h5>
-          <p class="card-text">${element.clase} ${element.marca} ${element.modelo} precio:$${element.precio}</p>
+          <p class="card-text">${element.clase} ${element.marca} ${element.modelo} precio: $${element.precio}</p>
           <a class="btn btn-dark addCart" onClick="addToCart(${i})">Agregar al carrito</a>
         </div>`
         card.innerHTML = code;
@@ -46,12 +46,11 @@ const favProducts = (data) => {
 
 }
 
-
-
-
 // Compra completada
 const checkOut = () => {
     const total = document.getElementsByClassName("total")[0].innerHTML;
+    const conCart = document.getElementsByClassName("contCart");
+    conCart
     modalCart.innerHTML = "";
     refreshCart() > 5 ? Swal.fire({ title: "Increible!", text: "Como llevaste mas de cinco productos, te haremos un descuento del 10%", confirmButtonText: "Excelente" }) : Swal.fire({ text: "No hay descuentos disponibles." })
 
@@ -60,7 +59,7 @@ const checkOut = () => {
         <div class="clientData">
             <p>Complete sus datos por favor</p>
         </div>
-       <p class="text-center"><a href="./compra.html" target="_blank"> <button class="btn btn-warning form mx-auto" id="form")"> Ingrese sus datos</button> </a> </p>
+       <p class="text-center"> <button class="btn btn-warning form mx-auto" onClick="formRender()" id="form")"> Ingrese sus datos</button> </a> </p>
     </div>`
     const removeTable = document.getElementById("coso");
     removeTable.className = "none";
@@ -71,6 +70,39 @@ function newTab(url) {
     let win = window.open(url, "_blank");
     win.focus();
 }
+
+const formRender = () => {
+    const box = document.getElementById("box")
+    box.innerHTML = "";
+    const form = `
+    <div class="bg-light container mx-auto col-md-6 formu">
+    <h2 class="text-center py-3"> DATOS PARA EL ENVÍO </h2>
+    <div class="container">
+        <div class="row">
+            <div class="row">
+                <input type="text" id="nombre" placeholder="Nombre" value="" />
+                <div  class="text-danger"  id="name"></div>
+            </div>
+            <div class="row py-1">
+                <input type="email" id="email" placeholder="E-mail" />
+                <div class="text-danger" id="mail"></div>
+
+            </div>
+            <div class="row">
+                <input type="number" id="telefono" placeholder="Telefono" />
+            </div>
+            <div class="row py-1">
+                <input type="text" id="domicilio" placeholder="Domicilio" value="" />
+                <div class="text-danger" id="street"></div>
+            </div>
+            <p class="text-center py-1 mb">
+                <button type="button" class="btn btn-danger" onClick="valid()">Confirmar</button>
+            </p>
+        </div>
+    </div>
+</div>`;
+    box.innerHTML = form;
+  };
 
 refreshCart()
 
