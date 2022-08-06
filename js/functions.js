@@ -7,6 +7,10 @@ function getProductsCart() {
     return JSON.parse(localStorage.getItem("cart")) || [];
 };
 
+function eraseCart() {
+    localStorage.clear()
+}
+
 const discount = (total) => {
     return (total - (total * 0.10))
 }

@@ -96,6 +96,7 @@ const formRender = () => {
             </div>
             <div class="row">
                 <input type="number" id="telefono" placeholder="Telefono" />
+                <div class="text-danger" id="phone"></div>
             </div>
             <div class="row py-1">
                 <input type="text" id="domicilio" placeholder="Domicilio" value="" />

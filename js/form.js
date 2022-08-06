@@ -19,6 +19,16 @@ function valid() {
     else {
         mail.innerHTML = ""
     }
+    let telefono = document.getElementById("telefono").value
+    let phone = document.getElementById("phone")
+
+    if (telefono.length <= 7) {
+        phone.innerText = "Ingrese un número de teléfono por favor."
+    }
+    else {
+        phone.innerHTML = ""
+
+    }
 
     let domicilio = document.getElementById("domicilio").value
     let street = document.getElementById("street")
@@ -31,8 +41,9 @@ function valid() {
 
     }
 
-    if ((nombre.length > 4) && (re.exec(email) && (domicilio.length>4))) {
+    if ((nombre.length > 4) && (re.exec(email) && (domicilio.length>4) && (telefono.length > 7))) {
         Swal.fire({title:"Finalizaste tu compra!", text: `Se han ingresado correctamente los datos. Recibirás tu pedido en ${domicilio}` } )
+        eraseCart()
     }
 
 }
