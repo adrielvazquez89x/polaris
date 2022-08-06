@@ -1,6 +1,6 @@
 // Para crear la tienda
 
-let products = [];
+let products = [1];
 
 fetch("./js/products.json")
     .then((response) => response.json())
@@ -24,9 +24,15 @@ const storeProducts = (data) => {
         </div>`
         card.innerHTML = code;
         store.appendChild(card);
-    });
 
+        let alertAdd = document.getElementsByClassName("addCart");
+        alertAdd[0].addEventListener("click", alertAddCart);
+        for (alert of alertAdd) {
+            alert.addEventListener("click", alertAddCart);
+        };
+    });
 }
+
 
 // Favorito
 const favProducts = (data) => {
@@ -48,9 +54,9 @@ const favProducts = (data) => {
 
 // Compra completada
 const checkOut = () => {
-    const total = document.getElementsByClassName("total")[0].innerHTML;
-    const conCart = document.getElementsByClassName("contCart");
-    conCart
+    const show = document.querySelector(".contCart")
+    show.classList.add("blck")
+    
     modalCart.innerHTML = "";
     refreshCart() > 5 ? Swal.fire({ title: "Increible!", text: "Como llevaste mas de cinco productos, te haremos un descuento del 10%", confirmButtonText: "Excelente" }) : Swal.fire({ text: "No hay descuentos disponibles." })
 
@@ -102,7 +108,7 @@ const formRender = () => {
     </div>
 </div>`;
     box.innerHTML = form;
-  };
+};
 
 refreshCart()
 

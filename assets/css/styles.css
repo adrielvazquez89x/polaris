@@ -75,6 +75,9 @@ nav:hover .contCart {
 .none {
   display: none; }
 
+.blck {
+  display: block; }
+
 /* Foooter */
 footer {
   background-position: center;
@@ -171,15 +174,3 @@ main {
     color: white;
     padding-bottom: 1.5rem; }
 
-/* 
-.featuredd {
-    text-align: center;
-    background-color: blueviolet;
-    padding: 20px;
-    width: 200px;
-    height: 400px;
-    p {
-        color: #1AC071;
-        font-size: 32px;
-    }
-} */

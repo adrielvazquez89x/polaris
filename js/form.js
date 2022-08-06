@@ -2,7 +2,7 @@ function valid() {
     let nombre = document.getElementById("nombre").value
     let name = document.getElementById("name")
 
-    if (nombre.length < 4) {
+    if (nombre.length < 3) {
         name.innerText = "Ingrese un nombre válido por favor."
     }
     else {
@@ -36,12 +36,3 @@ function valid() {
     }
 
 }
-
-
-
-
-
-
-
-/* l
-} */
